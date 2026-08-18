@@ -1,15 +1,17 @@
 import storage
 
-def get_valid_choice(text, length) :
+def get_valid_choice(text, valid_keys) :
     while True :
         try : 
             choice = int(input(f"{text}"))
-            if 0 <= choice <= length :
+            if choice in valid_keys:
                 return choice
             else :
-                print(f"Please select number from 0 to {length} only. ")
-        except ValueError :
-            print("Invalid input. Please enter numbers only.")
+                # Show them exactly what numbers are allowed
+                valid_options = ", ".join(str(k) for k in valid_keys)
+                print(f"❌ Please select a valid number: {valid_options}")
+        except ValueError:
+            print("❌ Invalid input. Please enter numbers only.")
 
 def get_valid_strings(text, length) :
     while True :
@@ -45,13 +47,13 @@ def get_valid_integer(text) :
             print("Invalid input. Please enter numbers.")
 
 def get_product_id(inventory, category) :
-    prefix = category[0].upper()
+    prefix = category[:4].upper()
     existing_numbers = []
     for item in inventory : 
-        item_id = item.get("id", "")
+        item_id = item.get("product_id", "")
         if item_id.startswith(prefix) :
             try :
-                number_part = int(item_id[1:])
+                number_part = int(item_id[4:])
                 existing_numbers.append(number_part)
             except ValueError :
                 print("Invalid Error Occured")
@@ -59,4 +61,4 @@ def get_product_id(inventory, category) :
         next_number = max(existing_numbers) + 1
     else :
         next_number = 1
-    return f"{prefix}{next_number:03d}"
+    return f"{prefix}-{next_number:03d}"

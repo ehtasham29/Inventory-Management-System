@@ -1,0 +1,38 @@
+[
+    {
+        "product_id": "ELEC-001",
+        "name": "dell laptop",
+        "price": 68000.0,
+        "category": "electronics",
+        "quantity": 13,
+        "min_stock_level": 3,
+        "description": "8gb ram, ddr4, 11th gen, ms office lifetime"
+    },
+    {
+        "product_id": "ELEC-001",
+        "name": "gaming console",
+        "price": 18000.0,
+        "category": "electronics",
+        "quantity": 19,
+        "min_stock_level": 5,
+        "description": "support all advanced gaming features"
+    },
+    {
+        "product_id": "ELEC-001",
+        "name": "gaming console",
+        "price": 17000.0,
+        "category": "electronics",
+        "quantity": 13,
+        "min_stock_level": 3,
+        "description": "support all latest gamings features"
+    },
+    {
+        "product_id": "ELEC-001",
+        "name": "gaming console",
+        "price": 17000.0,
+        "category": "electronics",
+        "quantity": 19,
+        "min_stock_level": 3,
+        "description": "support all latest gaming and advanced gaming mode available"
+    }
+]

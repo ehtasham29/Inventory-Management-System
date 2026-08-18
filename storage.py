@@ -20,7 +20,7 @@ def load_inventory() :
         print("[Storage Warning] inventory.json is corrupted or empty. Starting fresh.")
         return []
 
-def save_data(data_list) :
+def save_inventory(data_list) :
     with open(INVENTORY_FILE, mode='w', encoding='utf-8') as file :
         json.dump(data_list, file, indent=4)
 

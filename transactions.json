@@ -1,0 +1,10 @@
+[
+    {
+        "transaction_id": "TXN-1",
+        "timestamp": "2026-08-18 10:10:03",
+        "product_id": "ELEC-001",
+        "action_type": "INITIAL_STOCK",
+        "quantity": 19,
+        "reason": "System setup / Inital Entry"
+    }
+]
